@@ -1,0 +1,94 @@
+body {
+  background: rgb(23, 23, 23);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+}
+
+.card {
+  position: relative;
+  width: 30rem;
+  height: 35rem;
+  background-color: black;
+  box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.5);
+}
+
+.content {
+  position: absolute;
+  bottom: 0px;
+  width: 80%;
+  height: 10px;
+  background: crimson;
+  left: 10%;
+  text-align: center;
+  transition: 0.5s;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h3 {
+  font-size: 30px;
+  text-transform: uppercase;
+  margin: 25px;
+  color: #fff;
+}
+
+p {
+  width: 80%;
+  margin: 10px auto;
+  font-size: 18px;
+  transition: 0.5s;
+  opacity: 0;
+  line-height: 25px;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+  background-color: black;
+  color: #fff;
+  padding: 10px 15px;
+  display: inline-block;
+  margin-top: 10px;
+  transition: 0.5s;
+  opacity: 0;
+  line-height: 25px;
+  color: #fff;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 1s;
+}
+
+.card:hover .content {
+  height: 100%;
+  width: 100%;
+  left: 0;
+}
+
+.card:hover p,
+.card:hover a {
+  opacity: 1;
+  transition-delay: 0.5s;
+}
+
+.img-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: 1s;
+}
+
+.card:hover img {
+  opacity: 0;
+}
