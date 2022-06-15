@@ -1,0 +1,25 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  color: #fff;
+}
+
+.scroll-container {
+  background: rgb(7, 7, 7);
+  width: 25rem;
+  padding: 30px;
+}
+
+.scroll-div {
+  width: 400px;
+  height: 500px;
+  background: rgb(7, 7, 7);
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.scroll-object {
+  padding: 20px;
+}
