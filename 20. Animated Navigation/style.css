@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+nav {
+  background: #fff;
+  padding: 20px;
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: width 0.6s linear;
+}
+
+nav.active {
+  width: 350px;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 0;
+  transition: width 0.6s linear;
+}
+
+nav.active ul {
+  width: 100%;
+}
+
+nav ul li {
+  transform: rotate(0deg);
+  opacity: 0;
+  transition: transfrom 0.6s linear, opacity 0.6s linear;
+}
+
+nav.active ul li {
+  opacity: 1;
+  transform: rotateY(360deg);
+}
+
+nav ul a {
+  position: relative;
+  color: #000;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.icon {
+  background: #fff;
+  border: 0;
+  padding: 0;
+  position: relative;
+  height: 30px;
+  width: 30px;
+  outline: none;
+  cursor: pointer;
+}
+
+.icon .line {
+  background: crimson;
+  height: 2px;
+  width: 20px;
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  transition: transfrom 0.6s linear;
+}
+
+.icon .line2 {
+  top: auto;
+  bottom: 10px;
+}
+
+nav.active .icon .line1 {
+  transform: rotate(-765deg) translateY(5.5px);
+}
+
+nav.active .icon .line2 {
+  transform: rotate(765deg) translateY(-5.5px);
+}
