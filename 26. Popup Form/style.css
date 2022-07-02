@@ -1,0 +1,117 @@
+:root {
+  --modal-duration: 1s;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  transition: transform 0.3s ease;
+}
+
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(https://images.unsplash.com/photo-1438786657495-640937046d18?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.content-container h1 {
+  font-size: 4rem;
+  color: #fff;
+}
+
+.content-container p {
+  width: 600px;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #fff;
+  line-height: 24px;
+}
+
+.cta-btn {
+  padding: 12px 30px;
+  font-size: 1.2rem;
+  outline: none;
+  border: none;
+  background-color: crimson;
+  color: #fff;
+  cursor: pointer;
+}
+
+.modal-container {
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.modal {
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  width: 400px;
+}
+
+.modal-content {
+  padding: 20px;
+}
+
+.modal-form div {
+  margin: 20px 0;
+}
+
+.modal-form label {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.modal-form .form-input {
+  padding: 8px;
+  width: 100%;
+}
+
+.close-btn {
+  background: transparent;
+  border: none;
+  font-size: 25px;
+  position: absolute;
+  top: 5px;
+  right: 12px;
+  cursor: pointer;
+}
+
+.modal-container .submit-btn {
+  padding: 10px 30px;
+  font-weight: bold;
+  background: crimson;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* JavaScript */
+.modal-container.show-modal {
+  display: block;
+}
