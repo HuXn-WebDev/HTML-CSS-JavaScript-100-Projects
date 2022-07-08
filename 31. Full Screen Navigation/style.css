@@ -1,0 +1,122 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  color: #333;
+}
+/* Menu Start */
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+  background-color: #5c6fda;
+  clip-path: circle(20px at calc(100vw - 5vw) 31px);
+  transition: clip-path 0.5s;
+}
+
+.menu li {
+  position: relative;
+  z-index: 5;
+}
+
+.menu a {
+  text-decoration: none;
+  color: rgb(46, 45, 45);
+  font-size: 1.125rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  display: inline-block;
+  width: 120px;
+  padding: 5px;
+}
+
+.btn {
+  position: absolute;
+  top: 20px;
+  left: calc(100vw - 5vw);
+  transform: translateX(-50%);
+  cursor: pointer;
+}
+
+.btn > span {
+  width: 3px;
+  height: 3px;
+  display: block;
+  border: 2px solid white;
+  border-radius: 50%;
+  margin-bottom: 1px;
+}
+
+.highlight {
+  position: absolute;
+  top: 0;
+  width: 0;
+  height: 0;
+  background-color: white;
+  transition: transform 0.3s;
+}
+/* Menu End */
+
+/* Image Container Start */
+.image-container {
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img {
+  width: 250px;
+  height: 250px;
+  margin: 20px;
+}
+
+.img-one {
+  background-image: url(images/atharva-tulsi-6ftd4RgUdnk-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.img-two {
+  background-image: url(images/6536956.jpg);
+  background-size: cover;
+  background-position: center;
+}
+/* Image Container End */
+
+/* Headings Start */
+.container {
+  padding: 0 5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+article {
+  padding: 20px 0;
+}
+
+article > h2 {
+  text-transform: uppercase;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.para {
+  max-width: 700px;
+  color: rgb(79, 77, 77);
+  padding: 10px;
+  text-align: center;
+  line-height: 22px;
+}
+
+/* Headings End */
